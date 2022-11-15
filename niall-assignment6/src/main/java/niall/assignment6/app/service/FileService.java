@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashMap;
-import java.util.Locale;
 import java.util.Map;
 
 public class FileService {
@@ -23,7 +22,7 @@ public class FileService {
 			fileReader.readLine();
 			while ((fileLine = fileReader.readLine()) != null) {
 				String[] lineArray = fileLine.split(",");
-				YearMonth month = YearMonth.parse(lineArray[0], DateTimeFormatter.ofPattern("LLL-yy", Locale.UK));
+				YearMonth month = YearMonth.parse(lineArray[0], DateTimeFormatter.ofPattern("LLL-yy"));
 				Integer sales = Integer.parseInt(lineArray[1]);
 
 				csvAsMap.put(month, sales);
