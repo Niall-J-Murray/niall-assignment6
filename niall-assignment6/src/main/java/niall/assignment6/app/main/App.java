@@ -80,7 +80,5 @@ public class App {
 				+ bestMonth.getKey() + " (" + bestMonth.getValue() + " units sold)"
 				+ "\nThe worst month for " + modelName + " was: "
 				+ worstMonth.getKey() + " (" + worstMonth.getValue() + " units sold)");
-
 	}
-
 }
